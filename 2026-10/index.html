@@ -2224,6 +2224,7 @@ video {
             <button type="button" class="hub-nav-btn" data-hub-nav="pronunciation">&#128266; Wymowa</button>
             <button type="button" class="hub-nav-btn" data-hub-nav="writing">&#128214; Teksty</button>
             <button type="button" class="hub-nav-btn" data-hub-nav="exercises">&#128203; &Cacute;wiczenia</button>
+            <button type="button" class="hub-nav-btn" data-hub-nav="games">&#127918; Gry</button>
             <button type="button" class="hub-nav-btn" data-hub-nav="sentences">&#9997;&#65039; Zdania</button>
         </nav>
         <!-- === HUB MODULE - END (nav) === -->
@@ -2696,6 +2697,33 @@ video {
             </div>
         </section>
         <!-- === HUB MODULE - END (exercises view) === -->
+        <!-- === HUB MODULE - START (games view) === -->
+        <section id="hub-games-view" class="hidden no-print flex-grow flex items-start justify-center relative z-20">
+            <div class="hub-shell">
+                <div class="hub-topbar"></div>
+                <div class="hub-inner">
+
+                    <div class="hub-head">
+                        <h2 class="hub-title">Gry</h2>
+                        <p class="hub-tagline">Gry z angielskim do zagrania na telefonie albo komputerze.</p>
+                    </div>
+
+                    <div id="hub-games-list"></div>
+
+                    <div class="hub-footer">
+                        <button type="button" class="hub-link-btn" data-hub-nav="home">&larr; Powr&oacute;t</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <div id="hub-game-overlay" class="no-print" style="position:fixed; inset:0; z-index:9999; background:#fff; display:none; flex-direction:column;">
+            <div style="display:flex; justify-content:flex-end; padding:6px 10px; border-bottom:1px solid #ddd; background:#f7f7f7;">
+                <button type="button" class="hub-link-btn" id="hub-game-close">&#10005; Zamknij gr&#281;</button>
+            </div>
+            <iframe id="hub-game-frame" title="Gra" style="flex:1; width:100%; border:0;"></iframe>
+        </div>
+        <!-- === HUB MODULE - END (games view) === -->
         <!-- === HUB MODULE - START (sentences view) === -->
         <section id="hub-sentences-view" class="hidden no-print flex-grow flex items-start justify-center relative z-20">
             <div class="hub-shell">
@@ -3058,6 +3086,78 @@ video {
                                     "sentenceWithGap": "Next spring our class is going on an [gap] to Germany and we'll stay with German families.",
                                     "firstLetterHint": "e"
                         }
+            ],
+            "Lekcja 4 (23.10)": [
+                        {
+                                    "word": "pool",
+                                    "translation": "basen",
+                                    "definition": "a place filled with water for swimming",
+                                    "pos": "n",
+                                    "sentenceWithGap": "On hot days we go swimming in the outdoor [gap] near our house.",
+                                    "firstLetterHint": "p"
+                        },
+                        {
+                                    "word": "mice",
+                                    "translation": "myszy (l.mn. od mouse)",
+                                    "definition": "small animals with long tails; plural of mouse",
+                                    "pos": "n",
+                                    "sentenceWithGap": "The cat caught two [gap] in the kitchen last night.",
+                                    "firstLetterHint": "m"
+                        },
+                        {
+                                    "word": "according to",
+                                    "translation": "według",
+                                    "definition": "as said by someone or something",
+                                    "pos": "phr",
+                                    "sentenceWithGap": "It will rain tomorrow, [gap] the weather forecast.",
+                                    "firstLetterHint": "a"
+                        },
+                        {
+                                    "word": "May I be excused?",
+                                    "translation": "Czy mogę wyjść? / Czy mogę odejść od stołu?",
+                                    "definition": "a polite question when you want to leave the table or the room",
+                                    "pos": "sent"
+                        },
+                        {
+                                    "word": "siblings",
+                                    "translation": "rodzeństwo",
+                                    "definition": "brothers and sisters",
+                                    "pos": "n",
+                                    "sentenceWithGap": "I have three [gap]: two brothers and a sister.",
+                                    "firstLetterHint": "s"
+                        },
+                        {
+                                    "word": "similar",
+                                    "translation": "podobny",
+                                    "definition": "almost the same",
+                                    "pos": "adj",
+                                    "sentenceWithGap": "My phone is very [gap] to yours - it's the same model, only a different colour.",
+                                    "firstLetterHint": "s"
+                        },
+                        {
+                                    "word": "ingredients",
+                                    "translation": "składniki",
+                                    "definition": "the foods you mix to make a dish",
+                                    "pos": "n",
+                                    "sentenceWithGap": "Flour, eggs and milk are the main [gap] of pancakes.",
+                                    "firstLetterHint": "i"
+                        },
+                        {
+                                    "word": "cuisine",
+                                    "translation": "kuchnia (sposób gotowania)",
+                                    "definition": "the style of cooking of a country",
+                                    "pos": "n",
+                                    "sentenceWithGap": "I love Italian [gap], especially pizza and pasta.",
+                                    "firstLetterHint": "c"
+                        },
+                        {
+                                    "word": "fed up with",
+                                    "translation": "mieć dość (czegoś)",
+                                    "definition": "bored or annoyed with something that has lasted too long",
+                                    "pos": "phr",
+                                    "sentenceWithGap": "I'm [gap] this rain - it has rained every day for two weeks!",
+                                    "firstLetterHint": "f"
+                        }
             ]
 };
 
@@ -3070,8 +3170,8 @@ video {
         "teacherWhatsApp": "48518977197",
         "storageKey": "hub_sami-z_2026-10",
         "studentKey": "hub_sami-z",
-        "stamp": "aktualizacja po lekcji 3, 10.10.2026",
-        "lastLessonPhrase": "lekcji 3",
+        "stamp": "aktualizacja po lekcji 4, 10.10.2026",
+        "lastLessonPhrase": "lekcji 4",
         "lessons": [
                 {
                         "label": "Lekcja 1",
@@ -3096,6 +3196,14 @@ video {
                         "vocabCount": 9,
                         "extraVocabCount": 0,
                         "topic": "Small talk. Powtórka z Lekcji 2 (test, fiszki, ćwiczenia). Repetytorium ósmoklasisty cz. 1, Unit 1, str. 7, zad. 5."
+                },
+                {
+                        "label": "Lekcja 4",
+                        "dateLabel": "23.10.2026",
+                        "categoryKey": "Lekcja 4 (23.10)",
+                        "vocabCount": 9,
+                        "extraVocabCount": 0,
+                        "topic": "Sprawdzenie zadania domowego i ćwiczeń z poprzedniej lekcji. Repetytorium ósmoklasisty cz. 1, Unit 1: str. 9 oraz słuchanie str. 10, zad. 2."
                 }
         ],
         "grammar": [
@@ -3336,6 +3444,12 @@ video {
                         "lessonLabel": "Lekcja 3",
                         "word": "abroad",
                         "translation": "za granicą",
+                        "note": ""
+                },
+                {
+                        "lessonLabel": "Lekcja 4",
+                        "word": "recipe",
+                        "translation": "przepis",
                         "note": ""
                 }
         ],
@@ -5067,6 +5181,7 @@ video {
                         ]
                 }
         ],
+        "games": [],
         "distractors": [
                 {
                         "word": "interview",
@@ -5162,6 +5277,21 @@ video {
                         "word": "How long have you lived here?",
                         "translation": "Jak długo tu mieszkasz?",
                         "pos": "sent"
+                },
+                {
+                        "word": "instead of",
+                        "translation": "zamiast",
+                        "pos": "phr"
+                },
+                {
+                        "word": "next to",
+                        "translation": "obok",
+                        "pos": "phr"
+                },
+                {
+                        "word": "in front of",
+                        "translation": "przed",
+                        "pos": "phr"
                 }
         ],
         "priorityVerbs": [],
@@ -5334,6 +5464,60 @@ video {
                         "lessons": [
                                 "Lekcja 3"
                         ]
+                },
+                {
+                        "word": "pool",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "mice",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "according to",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "May I be excused?",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "siblings",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "similar",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "ingredients",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "cuisine",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "fed up with",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
                 }
         ],
         "sentenceCount": 5,
@@ -5352,6 +5536,11 @@ video {
                         "lessonLabel": "Lekcja 3",
                         "dateLabel": "16.10.2026",
                         "text": "Zajrzyj do zakładki „Gramatyka”, przeczytaj omówienie na temat konstrukcji, których używamy do wyrażania czynności w przyszłości, obejrzyj filmik na ten sam temat i zrób test. Następnie w zakładce „Ćwiczenia” zrób zadania. Oczywiście regularnie ćwicz słówka za pomocą fiszek oraz testów. Sprawdź sobie też zakładkę „Wymowa” i poćwicz wymowę zawartych tam słówek."
+                },
+                {
+                        "lessonLabel": "Lekcja 4",
+                        "dateLabel": "23.10.2026",
+                        "text": "Zrób Interaktywny Arkusz E801, słuchanki 1-4. I ćwicz słówka z fiszek i testów."
                 }
         ]
 };
@@ -6790,6 +6979,7 @@ video {
         var PRONUNCIATION = HUB.pronunciation || [];
         var WRITING = HUB.writingSpeaking || [];
         var EXERCISES = HUB.exercises || [];
+        var GAMES = HUB.games || [];
         // Tryb pliku. "month" to hub miesieczny ucznia (slownictwo z jego lekcji,
         // gramatyka, wymowa, zdania, czasowniki). "unit" to strona jednego dzialu
         // z podrecznika: te same fiszki i ten sam test, tylko karmione slownictwem
@@ -6974,11 +7164,12 @@ video {
             pronunciation: 'hub-pronunciation-view',
             writing:       'hub-writing-view',
             exercises:     'hub-exercises-view',
-            sentences:     'hub-sentences-view'
+            sentences:     'hub-sentences-view',
+            games:         'hub-games-view'
         };
         var ALL_VIEW_IDS = [
             'hub-home-view', 'flashcards-view', 'config-view',
-            'hub-grammar-view', 'hub-media-view', 'hub-pronunciation-view', 'hub-writing-view', 'hub-exercises-view', 'hub-sentences-view', 'hub-verbs-view',
+            'hub-grammar-view', 'hub-media-view', 'hub-pronunciation-view', 'hub-writing-view', 'hub-exercises-view', 'hub-sentences-view', 'hub-verbs-view', 'hub-games-view',
             'path-selection-view', 'student-start-view', 'quiz-view'
         ];
 
@@ -7088,6 +7279,7 @@ video {
                 { key: 'pronunciation', icon: '🔊', label: 'Wymowa',    sub: count(PRONUNCIATION.length, 'słówko', 'słówka', 'słówek') + ' do posłuchania', count: PRONUNCIATION.length },
                 { key: 'writing',       icon: '📖', label: 'Teksty', sub: count(WRITING.length, 'tekst', 'teksty', 'tekstów') + ' do przeczytania/napisania', count: WRITING.length },
                 { key: 'exercises',     icon: '📋', label: 'Ćwiczenia', sub: count(EXERCISES.length, 'ćwiczenie', 'ćwiczenia', 'ćwiczeń') + ' z lukami', count: EXERCISES.length },
+                { key: 'games',         icon: '🎮', label: 'Gry', sub: count(GAMES.length, 'gra', 'gry', 'gier') + ' do zagrania', count: GAMES.length },
                 { key: 'sentences',     icon: '✍️', label: 'Ułóż zdania', sub: count(SENT_COUNT, 'słówko', 'słówka', 'słówek') + ' z puli ' + SENT_POOL.length + ', losowo', count: SENT_POOL.length }
             ];
             // Kafelek czasownikow inaczej wyszedlby na stronie Unitu aktywny, bo
@@ -10035,6 +10227,53 @@ video {
         }
 
         // ==========================================
+        // Gry: osadzony HTML otwierany w pelnoekranowej ramce
+        // ==========================================
+        var gameUrl = null;
+        function renderGames() {
+            var box = el('hub-games-list');
+            if (!box) return;
+            if (!GAMES.length) {
+                box.innerHTML = '<p class="hub-tagline">Na razie nie ma tu gier.</p>';
+            } else {
+                box.innerHTML = '<div class="hub-links">' + GAMES.map(function (g, i) {
+                    return '<button type="button" class="hub-link-tile" data-hub-game="' + i + '" style="cursor:pointer; text-align:left; width:100%">' +
+                        '<span>🎮 <strong>' + escapeHtml(g.title) + '</strong>' +
+                        (g.description ? '<br><span class="hub-tile-sub">' + escapeHtml(g.description) + '</span>' : '') +
+                        '</span></button>';
+                }).join('') + '</div>';
+            }
+            // Przycisk nawigacji znika, gdy nie ma gier - pusta zakladka nic nie daje.
+            var navBtn = document.querySelector('.hub-nav-btn[data-hub-nav="games"]');
+            hideIf(!GAMES.length, navBtn);
+            box.addEventListener('click', function (e) {
+                var b = e.target.closest ? e.target.closest('[data-hub-game]') : null;
+                if (b) openGame(parseInt(b.getAttribute('data-hub-game'), 10));
+            });
+            var close = el('hub-game-close');
+            if (close) close.addEventListener('click', closeGame);
+        }
+        function openGame(i) {
+            var g = GAMES[i];
+            if (!g) return;
+            stopSpeaking();
+            var bin = atob(g.html64);
+            var bytes = new Uint8Array(bin.length);
+            for (var k = 0; k < bin.length; k++) bytes[k] = bin.charCodeAt(k);
+            if (gameUrl) URL.revokeObjectURL(gameUrl);
+            gameUrl = URL.createObjectURL(new Blob([bytes], { type: 'text/html;charset=utf-8' }));
+            el('hub-game-frame').src = gameUrl;
+            el('hub-game-overlay').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        function closeGame() {
+            el('hub-game-overlay').style.display = 'none';
+            el('hub-game-frame').src = 'about:blank';
+            if (gameUrl) { URL.revokeObjectURL(gameUrl); gameUrl = null; }
+            document.body.style.overflow = '';
+        }
+
+        // ==========================================
         // Start
         // ==========================================
         function hubInit() {
@@ -10052,6 +10291,7 @@ video {
                 renderPronunciation();
                 renderWriting();
                 renderExercises();
+                renderGames();
 
                 loadSentences();
                 renderSentLessonChips();
